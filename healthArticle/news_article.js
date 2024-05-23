@@ -1,12 +1,12 @@
-var xhr = new XMLHttpRequest();
-var url = "./health_article.json";
+var xhrn = new XMLHttpRequest();
+var urln = "./news_article.json";
 
-xhr.open("GET", url, true);
-xhr.responseType = "json";
+xhrn.open("GET", urln, true);
+xhrn.responseType = "json";
 
-xhr.onload = function() {
-    var articles = xhr.response.articles;
-    var articlesDiv = document.getElementById("articles");
+xhrn.onload = function() {
+    var articles = xhrn.response.articles2;
+    var articlesDiv = document.getElementById("articles2");
     articles.forEach(function(article) {
         var articleDiv = document.createElement("div");
         articleDiv.classList.add("article");
@@ -38,6 +38,6 @@ xhr.onload = function() {
         articleDiv.appendChild(benefitsList);
         articlesDiv.appendChild(articleDiv);
     });
-}
+} 
 
-xhr.send();
+xhrn.send();
